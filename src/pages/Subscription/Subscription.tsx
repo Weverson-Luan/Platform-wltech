@@ -2,6 +2,7 @@ import { gql, useMutation } from "@apollo/client";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LogoWlTECH } from "../../components/Logo/LogoWlTECH";
+import  ImageCodeMockup  from "../../assets/code-mockup.png";
 import { CheckCircle } from "phosphor-react";
 import { useCreateSubscriberMutation } from "../../graphql/generated";
 
@@ -83,7 +84,7 @@ function Subscription(){
         </div>
       </div>
 
-      <img src="/src/assets/code-mockup.png" alt="" className="mt-10" />
+      <img src={ImageCodeMockup} alt="" className="mt-10" />
     </div>
   )
 };
