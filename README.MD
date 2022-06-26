@@ -10,13 +10,21 @@ yarn tailwindcss init -p
 yarn add @apollo/client
 yarn add graphql
 
-1- Instalaçaõ
+# 3- Instalaçaõ de icones
 
-1- Instalaçaõ
+yarn add phosphor-react
 
-1- Instalaçaõ
+# 3- Instalaçaõ date-fns
 
-1- Instalaçaõ
+yarn add date-fns
+
+# 4- Instalaçaõ vimejs
+
+yarn add @vime/core @vime/react --force
+
+# 5- Instalaçaõ react-router-dom
+
+yarn add react-router-dom
 
 1- Instalaçaõ
 
