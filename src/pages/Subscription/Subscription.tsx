@@ -3,25 +3,17 @@ import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LogoWlTECH } from "../../components/Logo/LogoWlTECH";
 import { CheckCircle } from "phosphor-react";
+import { useCreateSubscriberMutation } from "../../graphql/generated";
 
 
 
-const CREATE_SUBSCRIBE_MUTATION =  gql`
-
-mutation CreateSubscriber ($name: String!, $email: String!)  {
-  createSubscriber(data: {name: $name, email: $email}) {
-    id
-    name
-  }
-}
-`;
 function Subscription(){
   const navigate = useNavigate();
 
   const [ name, setName ] = useState('');
   const [ email, setEmail ] = useState('');
 
-  const [ createSubscriber, { data, loading } ] = useMutation(CREATE_SUBSCRIBE_MUTATION);
+  const [ createSubscriber, { data, loading } ] = useCreateSubscriberMutation();
 
  async function handleSubscribe(event: FormEvent){
     try {

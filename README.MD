@@ -26,14 +26,18 @@ yarn add @vime/core @vime/react --force
 
 yarn add react-router-dom
 
-1- Instalaçaõ
+# 6- Instalaçaõ graphql-codegen/typescript
 
-1- Instalaçaõ
+yarn add --dev @graphql-codegen/typescript
 
-1- Instalaçaõ
+# 7- Instalaçaõ @graphql-codegen/typescript-operations
 
-1- Instalaçaõ
+yarn add --dev @graphql-codegen/typescript-operations
 
-1- Instalaçaõ
+# 8- Instalaçaõ @graphql-codegen/typescript-react-apollo
 
-1- Instalaçaõ
+yarn add --dev @graphql-codegen/typescript-react-apollo
+
+# 9- Instalaçaõ @graphql-codegen/cli
+
+yarn add --dev @graphql-codegen/cli
