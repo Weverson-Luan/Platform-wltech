@@ -1,31 +1,20 @@
-import { gql, useQuery } from "@apollo/client";
+import { ApolloProvider } from '@apollo/client'
+import { client } from './lib/apollo';
+import { BrowserRouter } from 'react-router-dom';
 
-const GET_LESSONS_QUERY = gql`
-  query {
-    lessons{
-      id
-      title
-    }
-  }
-`
+/**
+ *  Router
+ */
 
-interface LessonsProps{
-  id: string,
-  title: string;
-}
+import { Router } from './routes';
+
 function App() {
-  const { data } = useQuery<{ lessons: LessonsProps[]}>(GET_LESSONS_QUERY);
   return (
-    <div>
-        <h1 className="text-2xl text-violet-700">Hellow</h1>
-        <ul>
-          {
-            data?.lessons.map((lesson: LessonsProps, index)=> {
-              return <li key={index}>{lesson.title}</li>
-            })
-          }
-        </ul>
-    </div> 
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+       <Router />
+      </BrowserRouter>
+    </ApolloProvider>
   )
 }
 
