@@ -47,7 +47,10 @@ function Lesson( props : LessonProps) {
               </span>
             )
            }
-            <span className="text-xs rounded border py-[0.125rem] px-2 text-white border-green-300 font-bold">
+            <span className={classNames('text-xs rounded border py-[0.125rem] px-2 text-white font-bold', {
+              'border-withe': isActiveLesson,
+              'border-green-300' : !isActiveLesson
+            })}>
                {
                 props.type === 'live' ? 'AO VIVO' : 'AULA PRÁTICA'
                } 
